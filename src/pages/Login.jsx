@@ -46,7 +46,7 @@ export const Login = () => {
           <figure className="hidden lg:flex flex-1 ">
             <img
               className="w-[900px]"
-              src="./src/assets/images/sign-up.jfif"
+              src="src/assets/images/sign-up.jfif"
               alt=""
             />
           </figure>

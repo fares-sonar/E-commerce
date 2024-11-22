@@ -143,7 +143,7 @@ export const SignUp = () => {
                 <button className=" flex items-center justify-center gap-3 border w-full p-3 rounded-sm">
                   <img
                     className="w-6 h-6"
-                    src="./src/assets/images/icon-Google.png"
+                    src="src/assets/images/icon-Google.png"
                     alt=""
                   />
                   <a href="#">Sign up with Google</a>

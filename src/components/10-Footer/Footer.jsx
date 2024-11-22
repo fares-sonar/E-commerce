@@ -61,10 +61,10 @@ function Footer() {
                 <h2 className="text-2xl font-inter font-bold">{ele.head}</h2>
                 <p className="text-xs font-medium">{ele.paragraph}</p>
                 <figure className="flex overflow-hidden max-h-[200px]">
-                  <img className=" w-fit h-fit object-contain" src="./src/assets/images/QR.webp" alt="QR" loading="lazy" />
+                  <img className=" w-fit h-fit object-contain" src="src/assets/images/QR.webp" alt="QR" loading="lazy" />
                   <div className="ml-3">
-                  <img className=" object-contain w-[170px] h-fit -mt-8" src="./src/assets/images/Google-Play.webp" alt="google-play" loading="lazy" />
-                  <img className=" object-contain w-[170px] h-fit -mt-20" src="./src/assets/images/App-Store.webp" alt="google-play" loading="lazy" /> 
+                  <img className=" object-contain w-[170px] h-fit -mt-12" src="src/assets/images/Google-Play.webp" alt="google-play" loading="lazy" />
+                  <img className=" object-contain w-[170px] h-fit -mt-28" src="src/assets/images/App-Store.webp" alt="google-play" loading="lazy" /> 
                   </div>
                 </figure>
                 <div className="flex gap-6 ">

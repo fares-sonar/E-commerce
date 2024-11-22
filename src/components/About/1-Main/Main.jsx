@@ -11,7 +11,7 @@ function Main() {
           <p className="mt-6 leading-7">Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</p>
         </div>
         <figure>
-          <img src="./src/assets/images/about-banner.jfif" alt="banner" />
+          <img src="src/assets/images/about-banner.jfif" alt="banner" />
         </figure>
       </div>
     </section>

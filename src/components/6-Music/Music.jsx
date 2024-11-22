@@ -12,7 +12,7 @@ function Music() {
           </div>
         </div>
         <figure className="lg:flex hidden">
-          <img className="w-[600px] h-fit object-cover overflow-hidden" src="./src/assets/images/music-1.webp" alt="music" loading="lazy" />
+          <img className="w-[600px] h-fit object-cover overflow-hidden" src="src/assets/images/music-1.webp" alt="music" loading="lazy" />
         </figure>
       </div>
     </section>
