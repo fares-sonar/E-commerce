@@ -83,9 +83,9 @@ function Navbar() {
                   <ul className="text-white  space-y-4 ">
                     <li className="flex items-center gap-2 text-sm"><LuUser2 className="w-6 h-6"/><Link to={'/account'}>Manage My Account</Link></li>
                     <li className="flex items-center gap-2 text-sm"><FiShoppingBag className="w-6 h-6"/><Link to={'/cart'}> My Order</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><IoCloseCircleOutline className="w-6 h-6" /><Link to={'/account'}>My Cancellations</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><IoStarOutline className="w-6 h-6"/><Link to={'/account'}>My Reviews</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><CiLogout className="w-6 h-6"/><Link to={'/account'}>Logout</Link></li>
+                    <li className="flex items-center gap-2 text-sm"><IoCloseCircleOutline className="w-6 h-6" /><Link>My Cancellations</Link></li>
+                    <li className="flex items-center gap-2 text-sm"><IoStarOutline className="w-6 h-6"/><Link>My Reviews</Link></li>
+                    <li className="flex items-center gap-2 text-sm"><CiLogout className="w-6 h-6"/><Link to={'/login'}>Logout</Link></li>
                   </ul>
                 </div>
                 }
