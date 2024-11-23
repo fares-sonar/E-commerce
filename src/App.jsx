@@ -12,6 +12,7 @@ import Store from "./Context/Store.jsx";
 import { WishList } from "./pages/WishList.jsx";
 import { CheckOut } from "./pages/CheckOut.jsx";
 import Scroll from "./components/Scroll/Scroll.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         <Header />
         <Scroll/>
         <Routes>
-          <Route path="*" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/sign up" element={<SignUp />}></Route>
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/account" element={<Account />}></Route>
           <Route path="/wish-list" element={<WishList />}></Route>
           <Route path="/check-out" element={<CheckOut />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
         <Footer />
       </Store>

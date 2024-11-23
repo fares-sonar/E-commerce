@@ -4,19 +4,19 @@ import { CiTwitter } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
 const team = [
   {
-    img: "public/images/person-1.png",
+    img: "images/person-1.png",
     name: "Tom Cruise",
     position: "Founder & Chairman",
     media: [<FaFacebookF />, <CiTwitter />, <IoLogoInstagram />],
   },
   {
-    img: "public/images/person-2.png",
+    img: "images/person-2.png",
     name: "Emma Watson",
     position: "Managing Director",
     media: [<FaFacebookF />, <CiTwitter />, <IoLogoInstagram />],
   },
   {
-    img: "public/images/person-3.png",
+    img: "images/person-3.png",
     name: "Will Smith",
     position: "Product Designer",
     media: [<FaFacebookF />, <CiTwitter />, <IoLogoInstagram />],

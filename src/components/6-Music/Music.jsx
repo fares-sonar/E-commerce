@@ -16,7 +16,7 @@ function Music() {
         <figure className="lg:flex hidden">
           <img
             className="w-[600px] h-fit object-cover overflow-hidden"
-            src="./public/images/music-1.webp"
+            src="images/music-1.webp"
             alt="music"
             loading="lazy"
           />

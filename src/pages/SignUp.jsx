@@ -80,7 +80,7 @@ export const SignUp = () => {
           <figure className="hidden lg:flex flex-1">
             <img
               className="w-[900px]"
-              src="public/images/sign-up.jfif"
+              src="images/sign-up.jfif"
               alt=""
             />
           </figure>
@@ -143,7 +143,7 @@ export const SignUp = () => {
                 <button className=" flex items-center justify-center gap-3 border w-full p-3 rounded-sm">
                   <img
                     className="w-6 h-6"
-                    src="public/images/icon-Google.png"
+                    src="./public/images/Icon-Google.png"
                     alt=""
                   />
                   <a href="#">Sign up with Google</a>
