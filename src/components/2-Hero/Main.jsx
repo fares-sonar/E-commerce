@@ -7,7 +7,7 @@ function Main() {
         <div className="flex items-center gap-6">
           <img
             className="w-12 h-fit"
-            src="images/apple.webp"
+            src="/images/apple.webp"
             alt="apple"
             loading="lazy"
           />
