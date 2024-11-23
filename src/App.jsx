@@ -11,12 +11,14 @@ import Header from "./components/1-header/Header.jsx";
 import Store from "./Context/Store.jsx";
 import { WishList } from "./pages/WishList.jsx";
 import { CheckOut } from "./pages/CheckOut.jsx";
+import Scroll from "./components/Scroll/Scroll.jsx";
 
 const App = () => {
   return (
     <>  
       <Store>
         <Header />
+        <Scroll/>
         <Routes>
           <Route path="*" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>

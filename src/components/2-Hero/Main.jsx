@@ -7,7 +7,7 @@ function Main() {
         <div className="flex items-center gap-6">
           <img
             className="w-12 h-fit"
-            src="src/assets/images/apple.webp"
+            src="public/images/apple.webp"
             alt="apple"
             loading="lazy"
           />
@@ -24,7 +24,7 @@ function Main() {
       <figure className="hidden lg:flex flex-1 text-center ">
         <img
           className="lg:w-full lg:h-[280px] h-fit object-contain"
-          src="src/assets/images/phone.webp"
+          src="public/images/phone.webp"
           alt="phone"
           loading="lazy"
         />

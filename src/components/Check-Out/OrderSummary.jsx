@@ -51,8 +51,6 @@ function OrderSummary() {
                 id="bank"
                 name="paymentMethod"
                 value="bank"
-                // checked={formData.paymentMethod === 'bank'}
-                // onChange={handleInputChange}
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500"
               />
               <span className="font-medium">Bank</span>
@@ -89,8 +87,6 @@ function OrderSummary() {
               id="cash"
               name="paymentMethod"
               value="cash"
-              // checked={formData.paymentMethod === 'cash'}
-              // onChange={handleInputChange}
               className="h-4 w-4 text-blue-600 focus:ring-blue-500"
             />
             <label htmlFor="cash" className="font-medium">
@@ -99,13 +95,13 @@ function OrderSummary() {
           </div>
         </div>
 
-        <div className="flex space-x-2">
+        <div className="flex md:flex-row flex-col md:space-x-2 space-x-0 sm:space-y-2">
           <input
             type="text"
             placeholder="Coupon Code"
             value={couponCode}
             onChange={(e) => setCouponCode(e.target.value)}
-            className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="md:flex-1 flex-shrink-0 rounded-md bg-gray-100 py-4 px-8 shadow-sm outline-none"
           />
         
           <Button text={"Apply Coupon"}/>

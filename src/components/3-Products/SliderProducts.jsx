@@ -54,7 +54,7 @@ function SliderProducts() {
 
   return (
     <>
-      <div className="mt-9">
+      <div className="my-9">
         <Slider {...settings}>
           {data.map((products) => {
             return (

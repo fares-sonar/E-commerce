@@ -43,7 +43,7 @@ function BillingDetails() {
             required
             value={formData.firstName}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md  bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -60,7 +60,7 @@ function BillingDetails() {
             name="companyName"
             value={formData.companyName}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -78,7 +78,7 @@ function BillingDetails() {
             required
             value={formData.streetAddress}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -95,7 +95,7 @@ function BillingDetails() {
             name="apartment"
             value={formData.apartment}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -113,7 +113,7 @@ function BillingDetails() {
             required
             value={formData.town}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -131,7 +131,7 @@ function BillingDetails() {
             required
             value={formData.phone}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 
@@ -149,7 +149,7 @@ function BillingDetails() {
             required
             value={formData.email}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+            className="mt-1 w-full rounded-md   bg-gray-100 outline-none border-b-2 p-2"
           />
         </div>
 

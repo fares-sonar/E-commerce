@@ -28,7 +28,7 @@ export const Cart = () => {
             </button>
           </div>
           <div className=" flex justify-between items-start mt-14">
-            <div className=" space-x-8">
+            <div className=" space-y-8">
               <input
                 type="text"
                 placeholder="Coupon Code"

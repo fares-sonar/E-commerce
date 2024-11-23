@@ -80,7 +80,7 @@ export const SignUp = () => {
           <figure className="hidden lg:flex flex-1">
             <img
               className="w-[900px]"
-              src="./src/assets/images/sign-up.jfif"
+              src="public/images/sign-up.jfif"
               alt=""
             />
           </figure>
@@ -92,7 +92,7 @@ export const SignUp = () => {
                 type="text"
                 placeholder="Name"
                 name="name"
-                className="outline-none border-b-2"
+                className="outline-none border-b-2 bg-transparent p-2"
                 value={formDate.name}
                 onChange={handleChange}
               />
@@ -106,7 +106,7 @@ export const SignUp = () => {
                 type="email"
                 name="email"
                 placeholder="Email or Phone Number"
-                className="outline-none border-b-2"
+                className="outline-none border-b-2 bg-transparent p-2"
                 value={formDate.email}
                 onChange={handleChange}
               />
@@ -120,7 +120,7 @@ export const SignUp = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
-                className="outline-none border-b-2"
+                className="outline-none border-b-2 bg-transparent p-2"
                 value={formDate.password}
                 onChange={handleChange}
               />
@@ -143,7 +143,7 @@ export const SignUp = () => {
                 <button className=" flex items-center justify-center gap-3 border w-full p-3 rounded-sm">
                   <img
                     className="w-6 h-6"
-                    src="src/assets/images/icon-Google.png"
+                    src="public/images/icon-Google.png"
                     alt=""
                   />
                   <a href="#">Sign up with Google</a>

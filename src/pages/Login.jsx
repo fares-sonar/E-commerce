@@ -46,7 +46,7 @@ export const Login = () => {
           <figure className="hidden lg:flex flex-1 ">
             <img
               className="w-[900px]"
-              src="src/assets/images/sign-up.jfif"
+              src="public/images/sign-up.jfif"
               alt=""
             />
           </figure>
@@ -63,7 +63,7 @@ export const Login = () => {
                 autoComplete="email"
                 value={input.email}
                 placeholder="Email or Phone Number"
-                className="outline-none border-b-2"
+                className="outline-none border-b-2 bg-transparent p-2"
               />
               <input
                 type="password"
@@ -72,7 +72,7 @@ export const Login = () => {
                 autoComplete="current-password"
                 value={input.password}
                 placeholder="Password"
-                className="outline-none border-b-2"
+                className="outline-none border-b-2 bg-transparent p-2"
               />
             </div>
             {error && (

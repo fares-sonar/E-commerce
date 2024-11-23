@@ -10,7 +10,7 @@ function ExploreProducts() {
   const { data } = useContext(StoreCard);
 
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8  mt-12 space-y-4">
+    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8  mt-12 space-y-4 mb-9">
       {data.slice(10, 18).map((products) => {
         return (
           <div className="" key={products.id}>
