@@ -1,11 +1,11 @@
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
-import { StoreCard } from "../../Context/Store";
 import { useContext } from "react";
+import { FetchData } from "../../Context/FetchDataContext";
 
-function BestProducts() {
-  const { data } = useContext(StoreCard);
+const BestProducts=()=> {
+  const { data } = useContext(FetchData);
   return (
     <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-8">
       {data.slice(10, 14).map((products) => {
@@ -13,9 +13,10 @@ function BestProducts() {
           <div className="" key={products.id}>
             <div className="group py-4 shadow relative p-4">
               <img
-                className="w-[190px] h-[180px] mx-auto"
+                className="w-48 h-48 object-contain mx-auto"
                 src={products.image}
                 alt="product"
+                loading="lazy"
               />
               <div className="absolute top-4 right-2">
                 <span>
@@ -27,20 +28,20 @@ function BestProducts() {
               </div>
             </div>
             <div className="mt-4">
-              <p className="text-base font-medium">
+              <p className="text-xl font-medium">
                 {products.title.length > 20
                   ? products.title.slice(0, 20) + "..."
                   : products.title}
               </p>
-              <h3 className="text-lightRed my-2">
+              <h3 className="text-lightRed my-2 text-xl">
                 ${products.price}{" "}
-                <span className="line-through ml-4 text-base text-gray-300">
+                <span className="line-through ml-4 text-xl text-black">
                   {Math.floor(products.price * 1.5)}
                 </span>
               </h3>
               <div className="flex gap-1">
                 {[...Array(Math.ceil(products.rating.rate))].map((_, index) => (
-                  <FaStar key={index} className="text-orange-400" />
+                  <FaStar key={index} className="text-orange-400 text-xl" />
                 ))}
                 <span className="ml-3">({products.rating.count})</span>
               </div>

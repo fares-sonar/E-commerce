@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { StoreCard } from "../../Context/Store";
 import { FaRegTrashAlt } from "react-icons/fa";
-import FormatCurrency from "../../components/Format/FormatCurrency";
-
+import formatCurrency from "../../utils/formatCurrency";
+import { truncateText } from "../3-Products/SliderProducts";
 const Wish = () => {
-  const { wishList, dispatchWishList,dispatch, truncateText } =
-    useContext(StoreCard);
+  const { wishList, dispatchWishList, dispatch } = useContext(StoreCard);
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-7 mt-8">
       {wishList.map((products) => {
@@ -44,12 +43,11 @@ const Wish = () => {
                 {truncateText(products.title, 20)}
               </p>
               <h3 className="text-lightRed my-2">
-                {FormatCurrency(products.price)}{" "}
+                {formatCurrency(products.price)}{" "}
                 <span className="line-through ml-4 text-base text-gray-300">
                   {Math.floor(products.price * 1.5)}
                 </span>
               </h3>
-              
             </div>
           </div>
         );

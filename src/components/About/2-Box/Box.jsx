@@ -3,7 +3,7 @@ import { PiCurrencyCircleDollarThin } from "react-icons/pi";
 import { CiGift } from "react-icons/ci";
 import { FaSackDollar } from "react-icons/fa6";
 
-function Box() {
+const Box=()=> {
   const icons = [
     {icon:<CiShop/>, title: "10.5k ", text: "Sallers active our site"},
     {icon:<PiCurrencyCircleDollarThin/>, title: "33k", text: "Mopnthly Produduct Sale"},
@@ -14,8 +14,8 @@ function Box() {
     
     <section className="my-32">
     <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
-      {icons.map((item)=>(
-        <div key={item.title} className="group border rounded-md text-center p-8 hover:bg-lightRed transition-all">
+      {icons.map((item,i)=>(
+        <div key={i} className="group border rounded-md text-center p-8 hover:bg-lightRed transition-all">
             <div className="text-white group-hover:text-black bg-gray-300 w-[80px] h-[80px] mx-auto flex justify-center items-center rounded-full mb-4">
               <span className="text-3xl bg-black group-hover:bg-white p-4 rounded-full">{item.icon}</span>
             </div>

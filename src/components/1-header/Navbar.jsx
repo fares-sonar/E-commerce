@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
-import { IoSearch, IoCartOutline, IoClose,IoStarOutline,IoCloseCircleOutline   } from "react-icons/io5";
+import { IoSearch, IoCartOutline, IoClose } from "react-icons/io5";
 import { FaRegHeart, FaBarsStaggered } from "react-icons/fa6";
-import { LuUser2 } from "react-icons/lu";
-import { CiLogout } from "react-icons/ci";
-import { FiShoppingBag } from "react-icons/fi";
 
 import { useContext, useState } from "react";
 import { StoreCard } from "../../Context/Store";
+import UserMenu from "./UserMenu";
 
 function Navbar() {
   const [show, setShow] = useState(false);
   const { cart, wishList } = useContext(StoreCard);
-  const [showMenu, setShowMenu] = useState(false)
+
+  const links = [
+    { text: "Home", to: "/" },
+    { text: "contact", to: "/contact" },
+    { text: "About", to: "/about" },
+    { text: "Sign Up", to: "/sign up" },
+  ];
+
   return (
     <>
       <div className=" container  mt-10 mb-4 lg:px-0 px-4 z-10">
@@ -21,35 +26,16 @@ function Navbar() {
           </Link>
 
           <ul className="md:flex hidden lg:gap-12 gap-8">
-            <li>
-              <Link className="text-base font-normal hover:underline" to={"/"}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-base font-normal hover:underline"
-                to={"/contact"}
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-base font-normal hover:underline"
-                to={"/about"}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-base font-normal hover:underline"
-                to={"/sign up"}
-              >
-                Sign Up
-              </Link>
-            </li>
+            {links.map((link, i) => (
+              <li key={i}>
+                <Link
+                  className="text-base font-normal hover:underline"
+                  to={link.to}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <div className="md:flex hidden items-center gap-4">
@@ -61,6 +47,7 @@ function Navbar() {
               />
               <IoSearch className="w-6 h-6" />
             </div>
+            <div className="flex gap-4 items-center">
             <Link to={"/wish-list"} className="relative">
               <FaRegHeart className=" w-8 h-8" />
               <div className="absolute flex justify-center items-center w-5 h-5 -top-2 -right-2 bg-lightRed rounded-full  ">
@@ -73,24 +60,8 @@ function Navbar() {
                 <span className="text-white text-sm">{cart.length}</span>
               </div>
             </Link>
-            {localStorage.getItem("users") && (
-              <div className="relative">
-                <Link>
-                  <LuUser2 className=" w-8 h-8 cursor-pointer font-medium" onClick={()=> setShowMenu(!showMenu)} />
-                </Link>
-                {showMenu && 
-                  <div className="absolute z-10 right-2 w-56 p-5 bg-gradient-to-bl from-zinc-900 to-fuchsia-400 rounded-md backdrop-blur-md bg-white/30">
-                  <ul className="text-white  space-y-4 ">
-                    <li className="flex items-center gap-2 text-sm"><LuUser2 className="w-6 h-6"/><Link to={'/account'}>Manage My Account</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><FiShoppingBag className="w-6 h-6"/><Link to={'/cart'}> My Order</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><IoCloseCircleOutline className="w-6 h-6" /><Link>My Cancellations</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><IoStarOutline className="w-6 h-6"/><Link>My Reviews</Link></li>
-                    <li className="flex items-center gap-2 text-sm"><CiLogout className="w-6 h-6"/><Link to={'/login'}>Logout</Link></li>
-                  </ul>
-                </div>
-                }
-              </div>
-            )}
+            </div>
+            {localStorage.getItem("users") && <UserMenu />}
           </div>
 
           <FaBarsStaggered
@@ -112,26 +83,13 @@ function Navbar() {
               />
 
               <ul className=" w-full text-center">
-                <li className="my-8 border-b pb-4">
-                  <Link className="text-base font-normal hover:underline ">
-                    Home
-                  </Link>
-                </li>
-                <li className="my-8 border-b pb-4">
-                  <Link className="text-base font-normal hover:underline ">
-                    Contact
-                  </Link>
-                </li>
-                <li className="my-8 border-b pb-4">
-                  <Link className="text-base font-normal hover:underline ">
-                    About
-                  </Link>
-                </li>
-                <li className="my-8 border-b pb-4">
-                  <Link className="text-base font-normal hover:underline ">
-                    Sign Up
-                  </Link>
-                </li>
+                {links.map((link, i) => (
+                  <li key={i} className="my-8 border-b pb-4">
+                    <Link className="text-base font-normal hover:underline ">
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
               </ul>
 
               <div className=" flex items-center gap-4 mb-4">
@@ -154,5 +112,4 @@ function Navbar() {
     </>
   );
 }
-
 export default Navbar;

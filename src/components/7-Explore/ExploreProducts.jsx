@@ -1,13 +1,11 @@
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
-// import PreArrow from "./PrevArrow";
-// import NextArrow from "./Nextarrow";
 import { FaStar } from "react-icons/fa";
 import { useContext } from "react";
-import { StoreCard } from "../../Context/Store";
+import { FetchData } from "../../Context/FetchDataContext";
 
-function ExploreProducts() {
-  const { data } = useContext(StoreCard);
+const ExploreProducts = () => {
+  const { data } = useContext(FetchData);
 
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8  mt-12 space-y-4 mb-9">
@@ -16,9 +14,10 @@ function ExploreProducts() {
           <div className="" key={products.id}>
             <div className="group shadow relative">
               <img
-                className="w-[190px] h-[180px] mx-auto"
+                className="w-48 h-48 object-contain mx-auto"
                 src={products.image}
                 alt="product"
+                loading="lazy"
               />
               <div className="absolute top-0 right-4">
                 <span>
@@ -33,20 +32,20 @@ function ExploreProducts() {
               </button>
             </div>
             <div className="mt-4">
-              <p className="text-base font-medium">
+              <p className="text-xl font-medium">
                 {products.title.length > 20
                   ? products.title.slice(0, 20) + "..."
                   : products.title}
               </p>
-              <h3 className="text-lightRed my-2">
+              <h3 className="text-lightRed text-xl my-2">
                 ${products.price}{" "}
-                <span className="line-through ml-4 text-base text-gray-300">
+                <span className="line-through ml-4 text-xl text-black">
                   {Math.floor(products.price * 1.5)}
                 </span>
               </h3>
-              <div className="flex gap-1">
+              <div className="flex items-center gap-1">
                 {[...Array(Math.ceil(products.rating.rate))].map((_, index) => (
-                  <FaStar key={index} className="text-orange-400" />
+                  <FaStar key={index} className="text-orange-400 text-xl" />
                 ))}
                 <span className="ml-3">({products.rating.count})</span>
               </div>
@@ -56,6 +55,6 @@ function ExploreProducts() {
       })}
     </div>
   );
-}
+};
 
 export default ExploreProducts;

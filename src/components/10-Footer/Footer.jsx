@@ -1,5 +1,5 @@
 import data from "./List";
-function Footer() {
+const Footer=()=> {
   return (
     <footer className="bg-black p-4">
       <div className="container text-white lg:py-20 py-10">

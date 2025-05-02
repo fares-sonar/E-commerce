@@ -7,7 +7,7 @@ const icons = [
   {icon:<RiCustomerServiceLine/>, title: "24/7 CUSTOMER SERVICE", text: "Friendly 24/7 customer support"},
   {icon:<GoShieldCheck/>, title: "MONEY BACK GUARANTEE", text: "We reurn money within 30 days"}
 ]
-function Services() {
+const  Services=()=> {
   return (
     <section className="my-32">
       <div className="flex flex-wrap justify-center gap-[88px]">

@@ -6,9 +6,9 @@ import {
   validateEmail,
   validatePassword,
   validateName,
-} from "../components/Utils/Validation";
-export const SignUp = () => {
-  const navigate= useNavigate()
+} from "../utils/validation";
+const SignUp = () => {
+  const navigate = useNavigate();
   const [formDate, setFormDate] = useState({
     name: "",
     email: "",
@@ -62,7 +62,7 @@ export const SignUp = () => {
       } catch (error) {
         console.log("Error Storing Data:", error);
       }
-      navigate('/login' , {replace: true});
+      navigate("/login", { replace: true });
     }
   };
 
@@ -80,8 +80,9 @@ export const SignUp = () => {
           <figure className="hidden lg:flex flex-1">
             <img
               className="w-[900px]"
-              src="images/sign-up.jfif"
-              alt=""
+              src="images/sign-up.webp"
+              alt="signUP"
+              loading="lazy"
             />
           </figure>
           <div className="">
@@ -143,8 +144,9 @@ export const SignUp = () => {
                 <button className=" flex items-center justify-center gap-3 border w-full p-3 rounded-sm">
                   <img
                     className="w-6 h-6"
-                    src="./public/images/Icon-Google.png"
-                    alt=""
+                    src="./public/images/Icon-Google.webp"
+                    alt="Google"
+                    loading="lazy"
                   />
                   <a href="#">Sign up with Google</a>
                 </button>
@@ -162,3 +164,4 @@ export const SignUp = () => {
     </>
   );
 };
+export default SignUp;

@@ -1,15 +1,16 @@
-import Button from '../Button/Button'
-import Title from '../Title/Title'
-import ExploreProducts from './ExploreProducts'
+import { lazy } from "react";
+import Button from "../Button/Button";
+import Title from "../Title/Title";
+const ExploreProducts = lazy(() => import("./ExploreProducts"));
 
-function Explore() {
+const Explore = () => {
   return (
-    <section className='mt-16'>
-      <Title title={"Explore Our Products"} text={"Our Products"}/>
+    <section className="mt-16">
+      <Title title={"Explore Our Products"} text={"Our Products"} />
       <ExploreProducts />
-      <Button text={"View All Products"}/>
+      <Button text={"View All Products"} />
     </section>
-  )
-}
+  );
+};
 
-export default Explore
+export default Explore;

@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { StoreCard } from "../../Context/Store";
 import { IoEyeOutline } from "react-icons/io5";
 
-import FormatCurrency from "../../components/Format/FormatCurrency";
+import FormatCurrency from "../../utils/formatCurrency";
 import { FaStar } from "react-icons/fa";
-
+import { truncateText } from "../3-Products/SliderProducts";
 function See() {
-  const { seeList, dispatchSeeList, dispatch, truncateText } =
+  const { seeList, dispatchSeeList, dispatch } =
     useContext(StoreCard);
 
   return (

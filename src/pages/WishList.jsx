@@ -3,7 +3,7 @@ import Wish from "../components/WishList/Wish";
 import See from "../components/WishList/See";
 import { StoreCard } from "../Context/Store";
 
-export const WishList = () => {
+const WishList = () => {
   const { wishList } = useContext(StoreCard);
   return (
     <section className="container lg:px-0 px-4 my-16">
@@ -29,3 +29,4 @@ export const WishList = () => {
     </section>
   );
 };
+export default WishList

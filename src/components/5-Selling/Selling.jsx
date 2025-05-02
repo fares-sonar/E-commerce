@@ -1,7 +1,8 @@
+import { lazy } from "react";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
-import BestProducts from "./BestProducts";
-function Selling() {
+const BestProducts = lazy(() => import("./BestProducts.jsx"));
+const Selling=()=> {
   return (
     <section>
       <div className="flex justify-between items-center">
@@ -10,7 +11,6 @@ function Selling() {
       </div>
       <BestProducts />
     </section>
-    
   );
 }
 

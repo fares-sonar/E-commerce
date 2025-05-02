@@ -3,9 +3,9 @@ const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined,{
   style:"currency"
 })
 
-const FormatCurrency = (number) => {
+const formatCurrency = (number) => {
   return (
     CURRENCY_FORMATTER.format(number)
   )
 }
-export default FormatCurrency
+export default formatCurrency

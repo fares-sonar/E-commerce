@@ -3,7 +3,7 @@ import Button from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { CiCircleAlert } from "react-icons/ci";
 
-export const Login = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [input, setInput] = useState({
@@ -27,10 +27,13 @@ export const Login = () => {
       }
 
       const user = JSON.parse(localStorage.getItem("users"));
-      console.log('input',input);
-      console.log('user',user);
+      console.log("input", input);
+      console.log("user", user);
 
-      if (input.email === user[0].email || input.password === user[0].password) {
+      if (
+        input.email === user[0].email ||
+        input.password === user[0].password
+      ) {
         navigate("/", { replace: true });
       } else {
         setError("Email or password is incorrect");
@@ -46,8 +49,9 @@ export const Login = () => {
           <figure className="hidden lg:flex flex-1 ">
             <img
               className="w-[900px]"
-              src="images/sign-up.jfif"
-              alt=""
+              src="images/sign-up.webp"
+              alt="sign-up"
+              loading="lazy"
             />
           </figure>
           <form onSubmit={checkLogin} className="">
@@ -104,3 +108,4 @@ export const Login = () => {
     </>
   );
 };
+export default Login;

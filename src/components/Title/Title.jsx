@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-function Title({title,text}) {
+const Title=({ title, text })=> {
   return (
     <div className="flex  flex-col space-y-6 ">
       <div className="flex items-center gap-4 ">
         <div className="w-5 h-10 rounded-[4px] bg-lightRed" />
-        <h3 className="text-lightRed font-semibold">{text}</h3>
+        <h2 className="text-lightRed text-3xl font-semibold">{text}</h2>
       </div>
-      <h2 className="lg:text-5xl md:text-3xl text-xl font-semibold font-inter">
+      <h2 className="lg:text-5xl md:text-3xl font-semibold font-inter">
         {title}
       </h2>
     </div>

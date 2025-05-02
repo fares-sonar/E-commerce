@@ -1,11 +1,11 @@
 import MusicTime from "./MusicTime";
 
-function Music() {
+const Music=()=> {
   return (
     <section className="mt-16">
       <div className="flex items-center bg-black text-white max-h-[500px] p-8">
         <div className="flex-1">
-          <h3 className="text-lightGreen font-semibold">Categories</h3>
+          <h3 className="text-lightGreen font-semibold text-xl">Categories</h3>
           <h2 className="lg:text-[48px] md:text-[33px] text-[28px] font-semibold font-inter">
             Enhance Your <br /> Music Experience
           </h2>

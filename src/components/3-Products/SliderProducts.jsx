@@ -1,19 +1,26 @@
+import { useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
-import PreArrow from "./PrevArrow";
-import NextArrow from "./Nextarrow";
 import { FaStar } from "react-icons/fa";
-import FormatCurrency from "../Format/FormatCurrency";
-import { useContext } from "react";
+import PreArrow from "./PrevArrow";
+import NextArrow from "./NextArrow";
+import FormatCurrency from "../../utils/formatCurrency";
 import { StoreCard } from "../../Context/Store";
 import { useNavigate } from "react-router-dom";
-function SliderProducts() {
+import { FetchData } from "../../Context/FetchDataContext";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const truncateText = (text, length) => {
+  return text.length > length ? text.slice(0, length) + "..." : text;
+};
+const SliderProducts = () => {
   const navigate = useNavigate();
-  const { data, dispatch, dispatchWishList, dispatchSeeList } =
+  const { dispatch, dispatchWishList, dispatchSeeList } =
     useContext(StoreCard);
+    const {data}= useContext(FetchData)
   const settings = {
     infinite: true,
     speed: 500,
@@ -48,9 +55,6 @@ function SliderProducts() {
       },
     ],
   };
-  const truncateText = (text, length) => {
-    return text.length > length ? text.slice(0, length) + "..." : text;
-  };
 
   return (
     <>
@@ -61,9 +65,9 @@ function SliderProducts() {
               <div className="" key={products.id}>
                 <div className="group shadow relative mx-4 p-4">
                   <img
-                    width={"190"}
-                    height={"180"}
-                    className=" w-[190px] h-[180px] mx-auto"
+                    width={208}
+                    height={208}
+                    className="w-48 h-48 mx-auto object-contain"
                     src={products.image}
                     alt="product"
                     loading="lazy"
@@ -102,11 +106,10 @@ function SliderProducts() {
                   </div>
                   <button
                     onClick={() => {
-                      if(localStorage.getItem("users")){
+                      if (localStorage.getItem("users")) {
                         dispatch({ products: products, type: "add" });
-                      }else{
+                      } else {
                         navigate("/login", { replace: true });
-
                       }
                     }}
                     className="text-center border w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -114,20 +117,24 @@ function SliderProducts() {
                     Add To Card
                   </button>
                 </div>
-                <div className="mt-4">
-                  <p className="text-base font-medium">
+
+                <div className="mt-4 ml-4">
+                  <p className="text-xl font-medium">
                     {truncateText(products.title, 20)}
                   </p>
-                  <h3 className="text-lightRed my-2">
+                  <h3 className="text-lightRed text-xl my-2">
                     {FormatCurrency(products.price)}{" "}
-                    <span className="line-through ml-4 text-base text-gray-300">
+                    <span className="line-through ml-4 text-xl text-black">
                       {Math.floor(products.price * 1.5)}
                     </span>
                   </h3>
-                  <div className="flex gap-1">
+                  <div className="flex items-center gap-1">
                     {[...Array(Math.ceil(products.rating.rate))].map(
                       (_, index) => (
-                        <FaStar key={index} className="text-orange-400" />
+                        <FaStar
+                          key={index}
+                          className="text-orange-400 text-xl"
+                        />
                       )
                     )}
                     <span className="ml-3">({products.rating.count})</span>
@@ -140,6 +147,6 @@ function SliderProducts() {
       </div>
     </>
   );
-}
+};
 
 export default SliderProducts;
