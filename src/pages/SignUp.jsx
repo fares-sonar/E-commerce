@@ -95,6 +95,7 @@ const SignUp = () => {
                 name="name"
                 className="outline-none border-b-2 bg-transparent p-2"
                 value={formDate.name}
+                autoComplete='text'
                 onChange={handleChange}
               />
               {error.username && (
@@ -109,6 +110,7 @@ const SignUp = () => {
                 placeholder="Email or Phone Number"
                 className="outline-none border-b-2 bg-transparent p-2"
                 value={formDate.email}
+                autoComplete='email'
                 onChange={handleChange}
               />
               {error.email && (
@@ -122,6 +124,7 @@ const SignUp = () => {
                 name="password"
                 placeholder="Password"
                 className="outline-none border-b-2 bg-transparent p-2"
+                autoComplete='password'
                 value={formDate.password}
                 onChange={handleChange}
               />
