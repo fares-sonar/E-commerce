@@ -16,7 +16,13 @@ function Main() {
         </div>
       </div>
       <figure className=" hidden lg:flex flex-1 lg:justify-center lg:items-center">
-        <img className="object-contain" src="images/phone.webp" alt="phone" width={400} height={280} />
+        <img
+          className="object-contain"
+          src="images/phone.webp"
+          alt="phone"
+          width={400}
+          height={280}
+        />
       </figure>
       <ul className="absolute flex left-[50%] -translate-x-[50%] bottom-2 space-x-2">
         {Array.from({ length: 5 }).map((__, i) =>

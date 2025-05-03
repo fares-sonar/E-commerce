@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Page_Title from "../components/About/Page-Title/Page_Title";
 import Button from "../components/Button/Button";
 import { CartItem } from "../components/Cart/CartItem";
-import { totalPrice } from "../Context/CartReducer";
+import { totalPrice } from "../utils/validation";
 import { StoreCard } from "../Context/Store";
 import { useContext } from "react";
 import FormatCurrency from "../utils/formatCurrency";

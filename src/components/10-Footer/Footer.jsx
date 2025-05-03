@@ -1,5 +1,5 @@
 import data from "./List";
-const Footer=()=> {
+const Footer = () => {
   return (
     <footer className="bg-black p-4">
       <div className="container text-white lg:py-20 py-10">
@@ -27,7 +27,9 @@ const Footer=()=> {
               <div key={ele.head} className="space-y-5">
                 <h2 className="text-2xl font-inter font-bold">{ele.head}</h2>
                 {ele.info.map((info) => (
-                  <p className="w-48" key={info}>{info}</p>
+                  <p className="w-48" key={info}>
+                    {info}
+                  </p>
                 ))}
               </div>
             ))}
@@ -61,15 +63,32 @@ const Footer=()=> {
                 <h2 className="text-2xl font-inter font-bold">{ele.head}</h2>
                 <p className="text-xs font-medium">{ele.paragraph}</p>
                 <figure className="flex overflow-hidden max-h-[200px]">
-                  <img className=" w-fit h-fit object-contain" src="images/QR.webp" alt="QR" loading="lazy" />
+                  <img
+                    className=" w-fit h-fit object-contain"
+                    src="images/QR.webp"
+                    alt="QR"
+                    loading="lazy"
+                  />
                   <div className="ml-3">
-                  <img className=" object-contain w-[170px] h-fit md:-mt-12 -mt-10" src="images/Google-Play.webp" alt="google-play" loading="lazy" />
-                  <img className=" object-contain w-[170px] h-fit md:-mt-28 -mt-20" src="images/App-Store.webp" alt="google-play" loading="lazy" /> 
+                    <img
+                      className=" object-contain w-[170px] h-fit md:-mt-12 -mt-10"
+                      src="images/Google-Play.webp"
+                      alt="google-play"
+                      loading="lazy"
+                    />
+                    <img
+                      className=" object-contain w-[170px] h-fit md:-mt-28 -mt-20"
+                      src="images/App-Store.webp"
+                      alt="google-play"
+                      loading="lazy"
+                    />
                   </div>
                 </figure>
                 <div className="flex gap-6 ">
                   {ele.icons.map((icon, index) => (
-                    <span key={index} className="text-2xl">{icon}</span>
+                    <span key={index} className="text-2xl">
+                      {icon}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -79,6 +98,6 @@ const Footer=()=> {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

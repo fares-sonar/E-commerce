@@ -9,4 +9,4 @@ export { default as Explore } from "./7-Explore/Explore.jsx";
 export { default as Arrival } from "./8-Arrival/Arrival.jsx";
 export { default as Services } from "./9-Services/Services.jsx";
 export { default as Footer } from "./10-Footer/Footer";
-export {default as Scroll} from './Scroll/Scroll.jsx'
+export { default as Scroll } from "./Scroll/Scroll.jsx";

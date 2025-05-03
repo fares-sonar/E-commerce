@@ -48,18 +48,18 @@ function Navbar() {
               <IoSearch className="w-6 h-6" />
             </div>
             <div className="flex gap-4 items-center">
-            <Link to={"/wish-list"} className="relative">
-              <FaRegHeart className=" w-8 h-8" />
-              <div className="absolute flex justify-center items-center w-5 h-5 -top-2 -right-2 bg-lightRed rounded-full  ">
-                <span className="text-white text-sm">{wishList.length}</span>
-              </div>
-            </Link>
-            <Link to={"/cart"} className="relative">
-              <IoCartOutline className=" w-8 h-8 cursor-pointer" />
-              <div className="absolute flex justify-center items-center w-5 h-5 -top-2 -right-2 bg-lightRed rounded-full  ">
-                <span className="text-white text-sm">{cart.length}</span>
-              </div>
-            </Link>
+              <Link to={"/wish-list"} className="relative">
+                <FaRegHeart className=" w-8 h-8" />
+                <div className="absolute flex justify-center items-center w-5 h-5 -top-2 -right-2 bg-lightRed rounded-full  ">
+                  <span className="text-white text-sm">{wishList.length}</span>
+                </div>
+              </Link>
+              <Link to={"/cart"} className="relative">
+                <IoCartOutline className=" w-8 h-8 cursor-pointer" />
+                <div className="absolute flex justify-center items-center w-5 h-5 -top-2 -right-2 bg-lightRed rounded-full  ">
+                  <span className="text-white text-sm">{cart.length}</span>
+                </div>
+              </Link>
             </div>
             {localStorage.getItem("users") && <UserMenu />}
           </div>

@@ -10,11 +10,15 @@ const data = [
     head: "Exclusive",
     title: "Subscribe",
     paragraph: "Get 10% off your first order",
-    icon: <RiSendPlane2Line/>,
+    icon: <RiSendPlane2Line />,
   },
   {
     head: "Support",
-    info:[`111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.`,"exclusive@gmail.com","+88015-88888-9999"],
+    info: [
+      `111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.`,
+      "exclusive@gmail.com",
+      "+88015-88888-9999",
+    ],
   },
   {
     head: "Account",

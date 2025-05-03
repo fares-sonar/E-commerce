@@ -1,6 +1,6 @@
 import MusicTime from "./MusicTime";
 
-const Music=()=> {
+const Music = () => {
   return (
     <section className="mt-16">
       <div className="flex items-center bg-black text-white max-h-[500px] p-8">
@@ -24,6 +24,6 @@ const Music=()=> {
       </div>
     </section>
   );
-}
+};
 
 export default Music;

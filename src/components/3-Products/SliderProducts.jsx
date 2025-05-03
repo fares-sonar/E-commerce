@@ -11,16 +11,12 @@ import FormatCurrency from "../../utils/formatCurrency";
 import { StoreCard } from "../../Context/Store";
 import { useNavigate } from "react-router-dom";
 import { FetchData } from "../../Context/FetchDataContext";
+import { truncateText } from "../../utils/validation";
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const truncateText = (text, length) => {
-  return text.length > length ? text.slice(0, length) + "..." : text;
-};
 const SliderProducts = () => {
   const navigate = useNavigate();
-  const { dispatch, dispatchWishList, dispatchSeeList } =
-    useContext(StoreCard);
-    const {data}= useContext(FetchData)
+  const { dispatch, dispatchWishList, dispatchSeeList } = useContext(StoreCard);
+  const { data } = useContext(FetchData);
   const settings = {
     infinite: true,
     speed: 500,

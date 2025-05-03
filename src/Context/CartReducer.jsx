@@ -1,10 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-export const totalPrice = (cart) => {
-  return cart.reduce(
-    (acc, product) => acc + product.quantity * product.price,
-    0
-  );
-};
+
 const CartReducer = (state, action) => {
   switch (action.type) {
     case "add":
@@ -17,7 +11,7 @@ const CartReducer = (state, action) => {
             : item
         );
       }
-      return [...state, action.products]; 
+      return [...state, action.products];
     case "remove":
       return state.filter((p) => p.id !== action.id);
     case "increase":

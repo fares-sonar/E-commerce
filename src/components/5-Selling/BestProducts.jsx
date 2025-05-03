@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { useContext } from "react";
 import { FetchData } from "../../Context/FetchDataContext";
 
-const BestProducts=()=> {
+const BestProducts = () => {
   const { data } = useContext(FetchData);
   return (
     <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-8">
@@ -51,6 +51,6 @@ const BestProducts=()=> {
       })}
     </div>
   );
-}
+};
 
 export default BestProducts;

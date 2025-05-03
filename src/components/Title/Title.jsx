@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Title=({ title, text })=> {
+const Title = ({ title, text }) => {
   return (
     <div className="flex  flex-col space-y-6 ">
       <div className="flex items-center gap-4 ">
@@ -11,6 +11,6 @@ const Title=({ title, text })=> {
       </h2>
     </div>
   );
-}
+};
 
 export default Title;

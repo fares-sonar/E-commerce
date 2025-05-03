@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { StoreCard } from "../../Context/Store";
 import { FaRegTrashAlt } from "react-icons/fa";
 import formatCurrency from "../../utils/formatCurrency";
-import { truncateText } from "../3-Products/SliderProducts";
+import { truncateText } from "../../utils/validation";
 const Wish = () => {
   const { wishList, dispatchWishList, dispatch } = useContext(StoreCard);
   return (

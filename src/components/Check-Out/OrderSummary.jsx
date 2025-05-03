@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { StoreCard } from "../../Context/Store";
 import formatCurrency from "../../utils/formatCurrency";
-import { totalPrice } from "../../Context/CartReducer";
+import { totalPrice } from "../../utils/validation";
 import Button from "../Button/Button";
 import { images } from "../../constants";
 const OrderSummary = () => {

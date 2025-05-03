@@ -15,4 +15,4 @@ function SeeReducer(state, action) {
   }
 }
 
-export default SeeReducer
+export default SeeReducer;

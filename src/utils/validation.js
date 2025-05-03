@@ -18,3 +18,14 @@ export const validateUsername = (username) => {
   const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
   return usernameRegex.test(username);
 };
+
+export const truncateText = (text, length) => {
+  return text.length > length ? text.slice(0, length) + "..." : text;
+};
+
+export const totalPrice = (cart) => {
+  return cart.reduce(
+    (acc, product) => acc + product.quantity * product.price,
+    0
+  );
+};

@@ -15,10 +15,18 @@ const getFromLocalStorage = (key, fallback = []) => {
 };
 
 const Store = ({ children }) => {
-
-  const [cart, dispatch] = useReducer(CartReducer, getFromLocalStorage("store"));
-  const [wishList, dispatchWishList] = useReducer(WishReducer, getFromLocalStorage("wish"));
-  const [seeList, dispatchSeeList] = useReducer(SeeReducer, getFromLocalStorage("see"));
+  const [cart, dispatch] = useReducer(
+    CartReducer,
+    getFromLocalStorage("store")
+  );
+  const [wishList, dispatchWishList] = useReducer(
+    WishReducer,
+    getFromLocalStorage("wish")
+  );
+  const [seeList, dispatchSeeList] = useReducer(
+    SeeReducer,
+    getFromLocalStorage("see")
+  );
 
   useEffect(() => {
     localStorage.setItem("store", JSON.stringify(cart));
@@ -38,7 +46,7 @@ const Store = ({ children }) => {
       }}
     >
       {children}
-    </StoreCard.Provider> 
-  )
-}
+    </StoreCard.Provider>
+  );
+};
 export default Store;

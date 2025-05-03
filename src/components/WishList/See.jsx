@@ -4,10 +4,9 @@ import { IoEyeOutline } from "react-icons/io5";
 
 import FormatCurrency from "../../utils/formatCurrency";
 import { FaStar } from "react-icons/fa";
-import { truncateText } from "../3-Products/SliderProducts";
+import { truncateText } from "../../utils/validation";
 function See() {
-  const { seeList, dispatchSeeList, dispatch } =
-    useContext(StoreCard);
+  const { seeList, dispatchSeeList, dispatch } = useContext(StoreCard);
 
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-7 mt-8">
@@ -24,7 +23,7 @@ function See() {
                 <span>
                   <IoEyeOutline
                     className="w-[24px] h-[24px]"
-                    onClick={() => {  
+                    onClick={() => {
                       dispatchSeeList({
                         id: products.id,
                         type: "remove",

@@ -1,6 +1,5 @@
 import { inputDiv } from "../../constants";
-const BillingDetails=()=> {
-
+const BillingDetails = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-8">Billing Details</h2>
@@ -37,5 +36,5 @@ const BillingDetails=()=> {
       </form>
     </div>
   );
-}
+};
 export default BillingDetails;
