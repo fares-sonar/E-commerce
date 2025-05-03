@@ -1,0 +1,1 @@
+const a=e=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),r=e=>/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(e),n=e=>e.length>=2&&e.length<=50,c=(e,t)=>e.length>t?e.slice(0,t)+"...":e,o=e=>e.reduce((t,s)=>t+s.quantity*s.price,0);export{n as a,r as b,c,o as t,a as v};
